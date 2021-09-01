@@ -1,0 +1,74 @@
+body{
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(100deg ,#000000,#001811); 
+}
+section{
+    width: 100%;
+    max-width: 500px;
+    background-color: rgb(250, 152, 6);
+    border-radius: 10px;
+    min-height: 30%;
+    box-shadow: 1px 1px 5px 3px #c0e0d8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+h1{
+    width: 100%;
+    font-size: 2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+
+section input{
+    display: inline-block;
+    width: 100%;
+    max-width: 50%;
+    height: 1.5rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border: 0px;
+    padding: 0.2em;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+}
+label{
+    display: inline-block;
+    width: 100% ;
+    font-size: 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-bottom: 5px ;
+}
+
+@media (min-width:0px) and (max-width:515px){
+    section{
+        max-width: 90%;
+    }
+    #ans,#base,#number{
+        font-size: 2.9vmin;
+    }
+    h1{
+        font-size: 3.5vmax;
+    }
+    label{
+        font-size: 2.5vmax;
+    }
+}
+
+@media(max-width:300px){
+    #ans,#base,#number{
+        font-size: 1.8vmax;
+    }
+    h1{
+        font-size: 2.5vmax;
+    }
+}
