@@ -11,7 +11,13 @@ number.addEventListener('input', function () {
 
     else if (parseInt(bas) >= 1) {
         if (bas === 10) {
-            output.value=Math.log10(num)
+            if (Math.log10(num) % 2 === 0) {
+                output.value = Math.log10(num)
+            }
+            else {
+                output.value = Math.log10(num).toFixed(5)
+
+            }
         }
        else if (Number.isInteger(Math.log(num) / Math.log(bas))===true  ) {
             output.value = Math.ceil(Math.log(num) / Math.log(bas));
@@ -35,13 +41,15 @@ base.addEventListener('input', function () {
             output.value='enter a valid number'
         }
 
-        else if (output.value === '') {
-            output.value=''
-        }
         
         else if (parseInt(base.value) >= 1) {
             if (parseInt(base.value) === 10) {
-                output.value=Math.log10(parseFloat(number.value))
+                if (Math.log10(parseFloat(number.value)) % 2 === 0) {
+                    output.value = Math.log10(parseFloat(number.value))
+                }
+                else {
+                    output.value= Math.log10(parseFloat(number.value)).toFixed(5)
+                }
             }
 
             else if (Number.isInteger(Math.log(parseFloat(number.value)) / Math.log(parseInt(base.value)))){
