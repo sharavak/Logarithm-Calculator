@@ -11,7 +11,7 @@ number.addEventListener('input', function () {
 
     else if (parseInt(bas) >= 1) {
         if (bas === 10) {
-            if (Math.log10(num) % 2 === 0) {
+            if (Number.isInteger(Math.log10(num))===true) {
                 output.value = Math.log10(num)
             }
             else {
@@ -44,7 +44,7 @@ base.addEventListener('input', function () {
         
         else if (parseInt(base.value) >= 1) {
             if (parseInt(base.value) === 10) {
-                if (Math.log10(parseFloat(number.value)) % 2 === 0) {
+                if (Number.isInteger(Math.log10(parseFloat(number.value)))===true) {
                     output.value = Math.log10(parseFloat(number.value))
                 }
                 else {
